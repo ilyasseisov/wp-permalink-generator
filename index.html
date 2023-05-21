@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Permalink for WP</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title mb80">
+        <label class="bg-blue" for="title-input">Article Title</label>
+        <input type="text" id="title-input" />
+        <button id="erase-title">
+          <img src="erase-icon.svg" />
+        </button>
+      </div>
+      <div class="permalink mb24">
+        <label class="bg-blue" for="permalink-input">Permalink</label>
+        <input type="text" id="permalink-input" />
+        <button id="copy-permalink">
+          <img src="copy-icon.svg" />
+        </button>
+        <span class="bg-green" id="permalink-length">0</span>
+        <span class="bg-grey-dark" id="copy-status-permalink">copied</span>
+      </div>
+      <div class="url">
+        <label class="bg-blue" for="url-input">URL</label>
+        <input type="text" id="url-input" />
+        <button id="copy-url">
+          <img src="copy-icon.svg" />
+        </button>
+        <span class="bg-grey-dark" id="copy-status-url">copied</span>
+      </div>
+    </div>
+
+    <script src="s.js"></script>
+  </body>
+</html>

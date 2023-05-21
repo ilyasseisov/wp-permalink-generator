@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e4e4e4;
+}
+
+.container {
+  background: #d0d0d0;
+  width: 1000px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(142, 142, 142, 0.2);
+}
+.container > div {
+  position: relative;
+}
+
+label {
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+}
+
+input {
+  font-size: 22px;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+input.error {
+  outline: 2px solid #e74c3c;
+}
+
+input.error ~ #permalink-length {
+  background-color: #e74c3c;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+button:hover {
+  transform: translateY(-4px);
+}
+
+#permalink-length {
+  position: absolute;
+  left: 140px;
+  top: 0;
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+#copy-status-permalink,
+#copy-status-url {
+  position: absolute;
+  right: 60px;
+  top: 0;
+  font-size: 18px;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+  opacity: 0;
+}
+
+#copy-status-permalink.active,
+#copy-status-url.active {
+  animation: goUp 1s linear normal forwards;
+}
+
+@keyframes goUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+.bg1 {
+  background: #ffe8e8;
+}
+
+.bg2 {
+  background: #e8fff5;
+}
+
+.bg-blue {
+  background-color: #3498db;
+}
+
+.bg-yellow {
+  background-color: #f1c40f;
+}
+
+.bg-red {
+  background-color: #e74c3c;
+}
+
+.bg-green {
+  background-color: #1abc9c;
+}
+
+.bg-grey-dark {
+  background-color: #34495e;
+}
+
+.mb24 {
+  margin-bottom: 24px;
+}
+
+.mb80 {
+  margin-bottom: 80px;
+}
