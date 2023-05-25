@@ -3,14 +3,14 @@
 const titleInput = document.querySelector('#title-input');
 const permalinkInput = document.querySelector('#permalink-input');
 const urlInput = document.querySelector('#url-input');
+const domainInput = document.querySelector('#domain-input');
 const permalinkLengthText = document.querySelector('#permalink-length');
 const eraseTitleBtn = document.querySelector('#erase-title');
 const copyPermalink = document.querySelector('#copy-permalink');
 const copyURL = document.querySelector('#copy-url');
 const copyStatusPermalink = document.querySelector('#copy-status-permalink');
 const copyStatusURL = document.querySelector('#copy-status-url');
-//
-const domainName = 'https://zen-gardener.com/';
+
 // Functions
 // title parse
 const parseTitle = () => {
@@ -41,7 +41,7 @@ const parseTitle = () => {
   console.log(permalinkInput.value.length);
   permalinkLengthCheck();
   // url generation
-  urlInput.value = `${domainName}${permalinkString}`;
+  urlInput.value = `${domainInput.value}${permalinkString}`;
 };
 
 // permalink length
@@ -55,7 +55,7 @@ const permalinkLengthCheck = () => {
   // length value display
   permalinkLengthText.textContent = permalinkInput.value.length;
   // url generation
-  urlInput.value = `${domainName}${permalinkInput.value}`;
+  urlInput.value = `${domainInput.value}${permalinkInput.value}`;
 };
 
 // erase title
